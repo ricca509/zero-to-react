@@ -1,9 +1,8 @@
 - Empty app
 - Talk about UI as function of data, what components are, props, React.createElement, JSX
 - Main component, post component into main component
-- Refactor Post into file
+- Refactor Post into file, content as props, intro to PropTypes and default values in ES6 classes
 - Add input and introduce internal state
-- PropTypes and default values
 - Add action and event handler for input, `this` binding end the event loop
 - Add internal state for new comments with action
 - Build comments list all in main component
