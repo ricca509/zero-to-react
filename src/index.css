@@ -12,3 +12,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.blog {
+  max-width: 960px;
+  margin: 20px auto;
+}
+
+.post-body {
+  line-height: 1.5rem;
+}
+
+.post-comments {
+  margin: 20px 0;
+}
+
+.post-comments input {
+  font-size: 16px;
+  padding: 5px 3px;
+  border: 1px solid #AAA;
+  border-radius: 2px;
+}

@@ -8,4 +8,4 @@
 - Build comments list all in main component
 - Explain how to lift state and transform into stateless components
 - Refactors `CommentsList` and `CommentsInput` in their own files
-- Word on state management
+- Component patterns, HOC (`defaultProps` HOC as example)
