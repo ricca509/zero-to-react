@@ -5,7 +5,8 @@ class Comments extends Component {
     super(props);
 
     this.state = {
-      commentText: 'initialText'
+      commentText: 'initialText',
+      commentList: []
     };
   }
 
@@ -13,6 +14,21 @@ class Comments extends Component {
     this.setState({
       commentText: evt.target.value
     });
+  }
+
+  onAddClicked = (evt) => {
+    if (!this.state.commentText) return;
+
+    this.setState({
+      commentList: [
+        ...this.state.commentList,
+        this.state.commentText
+      ]
+    }, () => {
+      this.setState({
+        commentText: ''
+      });
+    })
   }
 
   render() {
@@ -23,6 +39,15 @@ class Comments extends Component {
           value={this.state.commentText}
           onChange={this.onCommentInputChange}
         />
+        <button className="post-comments-btn" onClick={this.onAddClicked}>Add</button>
+        <hr />
+        {this.state.commentList.map(comment => {
+          return (
+            <li>
+              {comment}
+            </li>
+          );
+        })}
       </div>
     );
   }
