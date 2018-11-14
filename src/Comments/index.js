@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-
+import CommentList from '../CommentList/index';
+import CommentInput from '../CommentInput/index';
 class Comments extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      commentText: 'initialText',
+      commentText: '',
       commentList: []
     };
   }
@@ -34,20 +35,13 @@ class Comments extends Component {
   render() {
     return (
       <div className="post-comments">
-        <input
-          type="text"
-          value={this.state.commentText}
-          onChange={this.onCommentInputChange}
+        <CommentInput
+          commentText={this.state.commentText}
+          onCommentInputChange={this.onCommentInputChange}
+          onAddClicked={this.onAddClicked}
         />
-        <button className="post-comments-btn" onClick={this.onAddClicked}>Add</button>
         <hr />
-        {this.state.commentList.map(comment => {
-          return (
-            <li>
-              {comment}
-            </li>
-          );
-        })}
+        <CommentList comments={this.state.commentList} />
       </div>
     );
   }
