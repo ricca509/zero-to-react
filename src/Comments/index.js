@@ -9,12 +9,19 @@ class Comments extends Component {
     };
   }
 
+  onCommentInputChange = (evt) => {
+    this.setState({
+      commentText: evt.target.value
+    });
+  }
+
   render() {
     return (
       <div className="post-comments">
         <input
           type="text"
           value={this.state.commentText}
+          onChange={this.onCommentInputChange}
         />
       </div>
     );

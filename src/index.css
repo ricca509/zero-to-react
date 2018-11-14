@@ -15,7 +15,8 @@ code {
 
 .blog {
   max-width: 960px;
-  margin: 20px auto;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .post-body {
@@ -31,4 +32,11 @@ code {
   padding: 5px 3px;
   border: 1px solid #AAA;
   border-radius: 2px;
+}
+
+.post-comments .post-comments-btn {
+  font-size: 16px;
+  background: papayawhip;
+  border: 1px solid #aaa;
+  height: 30px;
 }
