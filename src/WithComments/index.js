@@ -21,6 +21,7 @@ const WithComments = WrappedComponent => class extends Component {
       <WrappedComponent
         onCommentAdded={this.onCommentAdded}
         comments={this.state.commentList}
+        {...this.props}
       />
     );
   }
