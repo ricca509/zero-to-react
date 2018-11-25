@@ -1,30 +1,6 @@
-import React, { Component } from 'react';
 import Comments from '../Comments/index';
+import WithComments from '../WithComments';
 
-class CommentsContainer extends Component {
-  state = {
-    commentList: []
-  }
-
-  onCommentAdded = (comment) => {
-    if (!comment) return;
-
-    this.setState({
-      commentList: [
-        ...this.state.commentList,
-        comment
-      ]
-    });
-  }
-
-  render() {
-    return (
-      <Comments
-        onCommentAdded={this.onCommentAdded}
-        comments={this.state.commentList}
-      />
-    );
-  }
-}
+const CommentsContainer = WithComments(Comments);
 
 export default CommentsContainer;
