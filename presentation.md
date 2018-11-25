@@ -11,4 +11,4 @@
 - Build comments list all in main `Comments` component
 - Explain how to lift state (refactor `CommentsList` and `CommentsInput` in their own files) and transform into stateless components. Split state into "App" state and "ui" state, showing the different meaning and where they belong
 - Introduce the first pattern: Container/UI components
-- Introduce HOC and how it can make things more generic
+- Introduce HOC and how it can make things more generic: In the container component refactor the `CommentsContainer` into a `WithComments` component that takes a `WrappedComponent` and return what was the `CommentsContainer` class. Then create a `CommentsContainer = WithComments(Comments)` and export it
